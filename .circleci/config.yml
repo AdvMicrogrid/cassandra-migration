@@ -51,7 +51,6 @@ jobs: # basic units of work in a run
     steps:
       - checkout
       - run: echo "this is the build job"
-test:
 
   test:
     docker:
