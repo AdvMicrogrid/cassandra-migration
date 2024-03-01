@@ -33,7 +33,7 @@ jobs: # basic units of work in a run
             - run: 
                 name: Evaluate Maven Dependencies if necessary
                 command: |
-                    [[ ! -f pom.xml ]] && echo "no pom.xml present" || mvn -f pom.xml dependency:go-offline -Dmaven.test.skip=true -DARTIFACTORY_USERNAME=${ARTIFACTORY_USERNAME} -DARTIFACTORY_PASSWORD=${ARTIFACTORY_PASSWORD} -DJITPACK_USERNAME=${CIRCLECI_JITPACK_ERCOT_TOKEN} -DJITPACK_PASSWORD=.
+                    [[ ! -f pom.xml ]] && echo "no pom.xml present" || mvn -f pom.xml dependency:go-offline -Dmaven.test.skip=true -DARTIFACTORY_USERNAME=${ARTIFACTORY_USERNAME} -DARTIFACTORY_PASSWORD=${ARTIFACTORY_PASSWORD}
             - save_cache:
                 paths:
                     - ~/.m2
